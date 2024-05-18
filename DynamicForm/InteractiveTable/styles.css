@@ -1,0 +1,61 @@
+/* styles.css */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+#table-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Filter Input */
+#filter-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #15e8f3;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Data Table */
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#data-table th, #data-table td {
+    border: 1px solid #10666c;
+    padding: 8px;
+}
+
+#data-table th {
+    cursor: pointer;
+    background-color: #a6bd54;
+}
+
+/* Pagination */
+#pagination {
+    margin-top: 20px;
+}
+
+#pagination button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#pagination .active {
+    font-weight: bold;
+    background-color: #0074D9;
+    color: #FFF;
+}
+

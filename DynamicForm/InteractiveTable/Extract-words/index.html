@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Highlighter</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="text-paragraph">The ancient castle stood atop the rugged cliff, its imposing silhouette casting a long shadow over the surrounding landscape. As the sun dipped below the horizon, the castle's battlements were bathed in a golden hue, giving the centuries-old structure an ethereal glow. Within its walls, tales of valor and betrayal echoed through the corridors, whispered by the ghosts of the past. But amidst the echoes of history, a single word stood out, its significance etched into the stone walls: 'Destiny.' With more than eight characters, it shimmered against the backdrop of the castle's history, a beacon of hope in a world filled with uncertainty.</p>
+
+    <script>
+        function highlightLongWords() {
+            const paragraph = document.getElementById('text-paragraph');
+            const words = paragraph.textContent.split(/\s+/);
+            paragraph.innerHTML = '';
+
+            words.forEach(word => {
+                if (word.length > 8) {
+                    const span = document.createElement('span');
+                    span.className = 'highlight';
+                    span.textContent = word;
+                    paragraph.appendChild(span);
+                    paragraph.appendChild(document.createTextNode(' '));
+                } else {
+                    paragraph.appendChild(document.createTextNode(word + ' '));
+                }
+            });
+        }
+
+        highlightLongWords();
+    </script>
+</body>
+</html>
